@@ -2,13 +2,41 @@
 <html>
 
 	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	
 	<body>
 		<h1>Todo List</h1>
-		<button id="displayTodosButton">Display Todos</button>
-		<button id="toggleAllButton">Toggle All</button>
+		
+		<div>
+			<button onclick="handlers.displayTodos()">Display Todos</button>
+			<button onclick="handlers.toggleAll()">Toggle All</button>
+		</div>
+		
+		<div>
+			<button onclick="handlers.addTodo()">Add</button>
+			<input id="addTodoTextInput" type="text" onchange="handlers.addTodo()">
+		</div>
+		
+		<div>
+			<button onclick="handlers.changeTodo()">Change Todo</button>
+			<input id="changeTodoPositionInput" type="number">
+			<input id="changeTodoTextInput" type="text" onchange="handlers.changeTodo()"> 
+		</div>
+		
+		<div>
+			<button onclick="handlers.deleteTodo()">Delete</button>
+			<input id="deleteTodoPositionInput" type="number" onchange="handlers.deleteTodo()">
+		</div>
+		
+		
+		<div>
+			<button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+			<input id="toggleCompletedPositionInput" type="number" onchange="handlers.toggleCompleted()">
+		</div>
+		
 		
 		<script src="script.js"></script>
 	</body>
